@@ -23,6 +23,16 @@ const routes = [
     path: "/template1",
     name: "Template1",
     component: () => import("../views/Template1.vue")
+  },
+  {
+    path: "/template2",
+    name: "Template2",
+    component: () => import("../views/Template2.vue")
+  },
+  {
+    path: "/template3",
+    name: "Template3",
+    component: () => import("../views/Template3.vue")
   }
 ];
 

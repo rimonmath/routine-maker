@@ -21,28 +21,13 @@
           <tbody>
             <tr v-for="(r, i) in routine" :key="i">
               <td class="column1">
-                <input
-                  type="text"
-                  v-model="r.class"
-                  class="table-input"
-                  @blur="r.editing = false"
-                />
+                <input type="text" v-model="r.class" class="table-input" />
               </td>
               <td class="column2">
-                <input
-                  type="text"
-                  v-model="r.subject"
-                  class="table-input"
-                  @blur="r.editing = false"
-                />
+                <input type="text" v-model="r.subject" class="table-input" />
               </td>
               <td class="column3">
-                <input
-                  type="text"
-                  v-model="r.duration"
-                  class="table-input"
-                  @blur="r.editing = false"
-                />
+                <input type="text" v-model="r.duration" class="table-input" />
               </td>
             </tr>
 
@@ -116,94 +101,4 @@ export default {
 };
 </script>
 
-<style>
-.routine-container {
-  width: 904px;
-  height: 904px;
-  max-width: 100%;
-  overflow: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid gray;
-}
-.routine {
-  width: 900px;
-  height: 900px;
-  background-image: url("/img/template1.png");
-  background-size: 100% 100%;
-
-  padding-top: 231px;
-}
-
-.date {
-  margin-left: 231px;
-  width: 441px;
-  height: 68px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 43px;
-}
-
-.date-input {
-  max-width: 100%;
-  text-align: center;
-}
-
-.table-input {
-  max-width: 100%;
-  text-align: center;
-}
-
-.routine-table {
-  border: 2px solid #fff;
-  width: 679px;
-  margin-left: 114px;
-  margin-top: 25px;
-  border-collapse: collapse;
-}
-
-.routine-table th {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-  color: #fff;
-  font-size: 22px;
-  padding: 12px 0;
-  text-align: center;
-  font-weight: bold;
-}
-
-.routine-table td {
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 25px;
-  padding: 26px 0;
-  text-align: center;
-}
-
-.column1 {
-  min-width: 99px;
-}
-
-.column1 .table-input {
-  max-width: 100px;
-}
-
-.column2 {
-  width: 300px;
-}
-
-.column2 .table-input {
-  max-width: 288px;
-}
-
-.column3 {
-  width: 262px;
-}
-
-.column3 .table-input {
-  max-width: 240px;
-}
-</style>
+<style></style>

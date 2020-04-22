@@ -2,7 +2,7 @@
   <div class="home">
     <h1>Select a template</h1>
     <v-row class="mb-6" no-gutters>
-      <v-col md="4">
+      <v-col cols="12" md="4">
         <router-link to="/template1">
           <div class="template">
             <img src="/img/template1.png" alt="" />
@@ -10,16 +10,20 @@
         </router-link>
       </v-col>
 
-      <v-col md="4">
-        <div class="template">
-          <img src="/img/template2.png" alt="" />
-        </div>
+      <v-col cols="12" md="4">
+        <router-link to="/template2">
+          <div class="template">
+            <img src="/img/template2.png" alt="" />
+          </div>
+        </router-link>
       </v-col>
 
-      <v-col md="4">
-        <div class="template">
-          <img src="/img/template3.png" alt="" />
-        </div>
+      <v-col cols="12" md="4">
+        <router-link to="/template3">
+          <div class="template">
+            <img src="/img/template3.png" alt="" />
+          </div>
+        </router-link>
       </v-col>
     </v-row>
   </div>

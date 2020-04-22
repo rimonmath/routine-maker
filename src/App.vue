@@ -15,7 +15,9 @@
 
     <v-app-bar app color="indigo" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Routine Maker</v-toolbar-title>
+      <router-link to="/" class="logo-link">
+        <v-toolbar-title>Routine Maker</v-toolbar-title>
+      </router-link>
     </v-app-bar>
 
     <v-content>
@@ -40,3 +42,10 @@ export default {
   })
 };
 </script>
+
+<style>
+.logo-link {
+  color: #fff !important;
+  text-decoration: none;
+}
+</style>
