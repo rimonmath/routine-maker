@@ -33,6 +33,11 @@ const routes = [
     path: "/template3",
     name: "Template3",
     component: () => import("../views/Template3.vue")
+  },
+  {
+    path: "/template4",
+    name: "Template4",
+    component: () => import("../views/Template4.vue")
   }
 ];
 

@@ -4,7 +4,7 @@
       <v-btn color="primary" @click="downloadNow">Download</v-btn>
     </div>
     <div class="routine-container">
-      <div class="routine routine--template2" id="routine" ref="routine">
+      <div class="routine routine--template4" id="routine" ref="routine">
         <div class="date">
           <input type="text" class="date-input" v-model="routineDate" />
         </div>
@@ -19,11 +19,6 @@
           </thead>
 
           <tbody>
-            <tr>
-              <td colspan="3">
-                <input type="text" v-model="coronaBreak" class="corona-input" />
-              </td>
-            </tr>
             <tr v-for="(r, i) in routine" :key="i">
               <td class="column1">
                 <input type="text" v-model="r.class" class="table-input" />
@@ -33,18 +28,33 @@
                 <input
                   type="text"
                   v-model="r.time1"
-                  class="table-input"
-                  v-if="r.time1"
+                  class="table-input table-input--small"
                 />
-              </td>
-              <td class="column3">
+
                 <input type="text" v-model="r.subject2" class="table-input" />
                 <input
                   type="text"
                   v-model="r.time2"
-                  class="table-input"
-                  v-if="r.time2"
+                  class="table-input table-input--small"
                 />
+              </td>
+              <td class="column3">
+                <hr class="blank" v-if="!r.subject3" />
+                <template v-else>
+                  <input type="text" v-model="r.subject3" class="table-input" />
+                  <input
+                    type="text"
+                    v-model="r.time3"
+                    class="table-input table-input--small"
+                  />
+
+                  <input type="text" v-model="r.subject4" class="table-input" />
+                  <input
+                    type="text"
+                    v-model="r.time4"
+                    class="table-input table-input--small"
+                  />
+                </template>
               </td>
             </tr>
 
@@ -79,42 +89,28 @@ export default {
   data() {
     return {
       routineDate: "২৩ এপ্রিলের সময়সুচি",
-      coronaBreak: "জাতীয় সঙ্গীত ও করোনা সচেতনতা (সকাল ১১ঃ০০-১১ঃ০৫)",
       routine: [
         {
-          class: "৬ষ্ঠ",
-          subject1: "বাংলা",
-          time1: "(সকাল ১১.০৫)",
-          subject2: "ইংরেজি",
-          time2: "(সকাল ১১.৪৫)"
-        },
-        {
-          class: "৭ম",
-          subject1: "গণিত (সকাল ১১.৪৫)",
-          time1: "",
-          subject2: "বিজ্ঞান (দুপুর ১২.২৫)",
-          time2: ""
-        },
-        {
-          class: "৮ম",
-          subject1: "বাংলা",
-          time1: "(দুপুর ১২.২৫)",
-          subject2: "গণিত",
-          time2: "(দুপুর ১.০৫)"
-        },
-        {
           class: "৯ম",
-          subject1: "গণিত",
-          time1: "(দুপুর ১.০৫)",
-          subject2: "ইংরেজি",
-          time2: "(দুপুর ১.৪৫)"
+          subject1: "জেনারেল ইলেক্ট্রিক্যাল ওয়ার্কস",
+          time1: "(বিকেল ২.৩০)",
+          subject2: "করোনা বিষয়ক সচেতনতা",
+          time2: "(বিকেল ২.৪৮)",
+          subject3: "ফার্ম মেশিনারী",
+          time3: "(বিকেল ২.৫০)",
+          subject4: "করোনা বিষয়ক সচেতনতা",
+          time4: "(বিকেল ৩.০৮)"
         },
         {
           class: "১০ম",
-          subject1: "ইংরেজি",
-          time1: "(দুপুর ১.৪৫)",
-          subject2: "রসায়ন",
-          time2: "(দুপুর ২.২৫)"
+          subject1: "ওয়েল্ডিং অ্যান্ড ফেব্রিকেশন",
+          time1: "(বিকেল ৩.১০)",
+          subject2: "করোনা বিষয়ক সচেতনতা",
+          time2: "(বিকেল ২.২৯)",
+          subject3: "",
+          time3: "",
+          subject4: "",
+          time4: ""
         }
       ]
     };
@@ -138,21 +134,48 @@ export default {
 </script>
 
 <style>
-.corona-input {
-  width: 100%;
-  text-align: center;
+.routine--template4 .routine-table {
+  margin-top: 11px;
+  margin-left: 167px;
+  width: auto;
 }
 
-.routine--template2 .routine-table th {
-  padding: 6px 0;
-  font-size: 22px;
+.routine--template4 .routine-table th {
+  padding: 5px 0;
+  font-size: 20px;
 }
 
-.routine--template2 .routine-table td {
+.routine--template4 .routine-table td {
   border: 1px solid #fff;
   color: #fff;
-  font-size: 19px;
-  padding: 4px 0;
+  font-size: 18px;
+  padding: 5px 0;
   text-align: center;
+}
+
+.routine--template4 .column2 {
+  width: 232px;
+}
+.routine--template4 .column2 .table-input {
+  max-width: 222px;
+}
+
+.routine--template4 .column3 {
+  width: 232px;
+}
+
+.routine--template4 .table-input {
+  width: 222px;
+}
+
+.table-input--small {
+  font-size: 16px;
+}
+
+hr.blank {
+  width: 155px;
+  border-top: 1px solid #015758;
+  border-bottom: 1px solid #2f8788;
+  margin: auto;
 }
 </style>

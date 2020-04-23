@@ -25,6 +25,14 @@
           </div>
         </router-link>
       </v-col>
+
+      <v-col cols="12" md="4">
+        <router-link to="/template4">
+          <div class="template">
+            <img src="/img/template4.png" alt="" />
+          </div>
+        </router-link>
+      </v-col>
     </v-row>
   </div>
 </template>

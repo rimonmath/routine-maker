@@ -26,6 +26,12 @@
   padding-top: 214px;
 }
 
+.routine--template4 {
+  background-image: url("/img/template4.png");
+  background-size: 100% 100%;
+  padding-top: 190px;
+}
+
 .date {
   margin-left: 231px;
   width: 441px;
@@ -58,6 +64,7 @@
 
 .routine--template2 .routine-table {
   margin-left: 104px;
+  margin-top: 22px;
 }
 
 .routine-table th {
