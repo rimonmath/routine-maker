@@ -64,7 +64,7 @@ export default {
   data: () => ({
     drawer: null,
     password: "",
-    loggedIn: true,
+    loggedIn: false,
     snackbar: false
   }),
   methods: {
